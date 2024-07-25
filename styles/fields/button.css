@@ -1,0 +1,18 @@
+button {
+  all: unset;
+  font: 600 1rem var(--font-text);;
+  color: var(--heading-color);
+  padding: .875rem 1.25rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--brand-dark);
+  margin-top: 3rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end
+}

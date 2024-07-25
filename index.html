@@ -21,10 +21,335 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="assets/Logo.svg" type="image/svg-ico">
+    <link rel="shortcut icon" href="assets/Logo.svg" type="image/svg-ico" />
     <link rel="stylesheet" href="styles/index.css" />
     <title>Convite de Aniversário</title>
   </head>
-  <body>
+  <body class="flex">
+    <div id="app">
+      <section class="main-container">
+        <header class="header-container">
+          <div class="text-overlay">
+            <img src="assets/Logo.svg" alt="logo" class="logo" />
+            <h1>Festivite</h1>
+            <p>Crie um convite digital para o seu evento</p>
+          </div>
+          <div class="image-background">
+            <img
+              src="assets/Background.png"
+              alt="fatia de um bolo de aniversário"
+            />
+          </div>
+        </header>
+      </section>
+      <section class="section-secondary">
+        <main>
+          <h2>Crie seu convite</h2>
+          <form method="post" enctype="multipart/form-data">
+            <fieldset class="about">
+              <div class="legend-wrapper flex">
+                <img
+                  src="assets/icons/calendar.svg"
+                  alt="icone de calendário"
+                />
+                <legend>Sobre o evento</legend>
+              </div>
+              <div class="input-wrapper">
+                <label for="eventname">Título</label>
+                <input
+                  id="eventname"
+                  name="eventname"
+                  type="text"
+                  placeholder="Nome do evento"
+                />
+              </div>
+              <div class="flex">
+                <div class="input-wrapper flex-1">
+                  <label for="startevent">Início</label>
+                  <input
+                    type="datetime-local"
+                    id="startevent"
+                    name="startevent"
+                    placeholder="DD/MM/AAAA, --:--"
+                  />
+                </div>
+                <div class="input-wrapper flex-1">
+                  <label for="endevent">Fim</label>
+                  <input
+                    type="datetime-local"
+                    id="endevent"
+                    name="endevent"
+                    placeholder="DD/MM/AAAA, --:--"
+                  />
+                </div>
+              </div>
+              <div class="flex">
+                <div class="input-wrapper flex-1">
+                    <label for="kindevent">Tipo</label>
+                    <div class="toggle-container">
+                        <input type="radio" id="presencial" name="kindevent" value="presencial" checked>
+                        <label for="presencial" class="option presencial">
+                          <img src="assets/icons/building.svg" alt="">Presencial
+                        </label>
+                        <input type="radio" id="online" name="kindevent" value="online">
+                        <label for="online" class="option online">
+                          <img src="assets/icons/video.svg" alt="">Online
+                        </label>
+                    </div>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <label for="locate">Local</label>
+                  <input
+                    type="text"
+                    id="locate"
+                    name="locate"
+                    placeholder="Link ou endereço"
+                  />
+                </div>
+              </div>
+              <div class="textarea-wrapper">
+                <label for="description">Descrição</label>
+                <textarea
+                  name="medical-info"
+                  id="description"
+                  cols="30"
+                  rows="5"
+                  placeholder="Escreva sobre os detalhes do evento"
+                ></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="personalization">
+              <div class="legend-wrapper flex">
+                <img
+                  src="assets/icons/brush.svg"
+                  alt="icone de um pincel de tinta"
+                />
+                <legend>Personalização</legend>
+              </div>
+              <div class="color-picker">
+                <p class="main-label">Cor principal</p> 
+                <div class="input-wrapper">
+                  <input type="radio" id="color1" name="color" value="brand-light">
+                  <label for="color1" class="color-label brand-light"></label>
+                  <input type="radio" id="color2" name="color" value="navy">
+                  <label for="color2" class="color-label navy"></label>
+                  <input type="radio" id="color3" name="color" value="purple">
+                  <label for="color3" class="color-label purple"></label>
+                  <input type="radio" id="color4" name="color" value="fuschia">
+                  <label for="color4" class="color-label fuschia"></label>
+                  <input type="radio" id="color5" name="color" value="pink">
+                  <label for="color5" class="color-label pink"></label>
+                  <input type="radio" id="color6" name="color" value="danger">
+                  <label for="color6" class="color-label danger"></label>
+                  <input type="radio" id="color7" name="color" value="orange">
+                  <label for="color7" class="color-label orange"></label>
+                  <input type="radio" id="color8" name="color" value="yellow">
+                  <label for="color8" class="color-label yellow"></label>
+                  <input type="radio" id="color9" name="color" value="lime">
+                  <label for="color9" class="color-label lime"></label>
+                  <input type="radio" id="color10" name="color" value="green">
+                  <label for="color10" class="color-label green"></label>
+                  <input type="radio" id="color11" name="color" value="cyan">
+                  <label for="color11" class="color-label cyan"></label>
+                </div>
+              </div>
+              <p class="main-label">Tema do Evento</p>
+              <div class="event-list">
+                <div class="input-wrapper">
+                  <input type="radio" id="anniversary" name="event" value="anniversary">
+                  <label for="anniversary" class="event-label">
+                    <img src="assets/events/birthday.jpeg" alt="Aniversário">
+                    <span>Aniversário</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="childrens" name="event" value="childrens">
+                  <label for="childrens" class="event-label">
+                    <img src="assets/events/childrens.jpeg" alt="Infantil">
+                    <span>Infantil</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="graduation" name="event" value="graduation">
+                  <label for="graduation" class="event-label">
+                    <img src="assets/events/graduation.jpeg" alt="Formatura">
+                    <span>Formatura</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="marriage" name="event" value="marriage">
+                  <label for="marriage" class="event-label">
+                    <img src="assets/events/marriage.jpeg" alt="Casamento">
+                    <span>Casamento</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="baby-tea" name="event" value="baby-tea">
+                  <label for="baby-tea" class="event-label">
+                    <img src="assets/events/baby-tea.jpeg" alt="Chá de bebê">
+                    <span>Chá de bebê</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="bridal-shower" name="event" value="bridal-shower">
+                  <label for="bridal-shower" class="event-label">
+                    <img src="assets/events/bridal-shower.jpeg" alt="Chá de panela">
+                    <span>Chá de panela</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="carnaval" name="event" value="carnaval">
+                  <label for="carnaval" class="event-label">
+                    <img src="assets/events/carnaval.jpeg" alt="Carnaval">
+                    <span>Carnaval</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="easter" name="event" value="easter">
+                  <label for="easter" class="event-label">
+                    <img src="assets/events/easter.jpeg" alt="Páscoa">
+                    <span>Páscoa</span>
+                  </label>
+                </div>
+                  <div class="input-wrapper">
+                  <input type="radio" id="sao-joao" name="event" value="sao-joao">
+                  <label for="sao-joao" class="event-label">
+                    <img src="assets/events/sao-joao.jpeg" alt="São João">
+                    <span>São João</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="halloween" name="event" value="halloween">
+                  <label for="halloween" class="event-label">
+                    <img src="assets/events/halloween.jpeg" alt="Halloween">
+                    <span>Halloween</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="christmas" name="event" value="christmas">
+                  <label for="christmas" class="event-label">
+                    <img src="assets/events/christmas.jpeg" alt="Natal">
+                    <span>Natal</span>
+                  </label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="radio" id="other" name="event" value="other">
+                  <label for="other" class="event-label">
+                    <img src="assets/events/other.jpeg" alt="Outro">
+                    <span>Outro</span>
+                  </label>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="input-wrapper flex-1">
+                  <p class="main-label">Estilo</p>
+                  <div class="wrapper">
+                    <input type="checkbox" id="btn-switch">
+                    <label for="btn-switch" class="btn-toggle"></label>
+                    <label for="btn-switch" class="label-text">Escuro</label>
+                  </div>
+                </div>
+                <div class="input-wrapper flex-2">
+                  <div class="droparea-wrapper">
+                    <label for="birth-file">Foto de capa</label>
+                  <div class="dropzone">
+                    <div class="dropzone-wrapper">
+                      <input type="file" id="cover" name="cover"/>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.64645 1.64645C7.84171 1.45118 8.15829 1.45118 8.35355 1.64645L11.6869 4.97978C11.8821 5.17504 11.8821 5.49162 11.6869 5.68689C11.4916 5.88215 11.175 5.88215 10.9798 5.68689L8.5 3.20711V10C8.5 10.2761 8.27614 10.5 8 10.5C7.72386 10.5 7.5 10.2761 7.5 10V3.20711L5.02022 5.68689C4.82496 5.88215 4.50838 5.88215 4.31311 5.68689C4.11785 5.49162 4.11785 5.17504 4.31311 4.97978L7.64645 1.64645ZM2 9.5C2.27614 9.5 2.5 9.72386 2.5 10V12.6667C2.5 12.8877 2.5878 13.0996 2.74408 13.2559C2.90036 13.4122 3.11232 13.5 3.33333 13.5H12.6667C12.8877 13.5 13.0996 13.4122 13.2559 13.2559C13.4122 13.0996 13.5 12.8877 13.5 12.6667V10C13.5 9.72386 13.7239 9.5 14 9.5C14.2761 9.5 14.5 9.72386 14.5 10V12.6667C14.5 13.1529 14.3068 13.6192 13.963 13.963C13.6192 14.3068 13.1529 14.5 12.6667 14.5H3.33333C2.8471 14.5 2.38079 14.3068 2.03697 13.963C1.69315 13.6192 1.5 13.1529 1.5 12.6667V10C1.5 9.72386 1.72386 9.5 2 9.5Z" fill="#59B2FF"/>
+                      </svg>
+                      <p>Selecionar</p>
+                    </div>
+                  <p>Nenhum arquivo selecionado</p> 
+                </div>
+            </fieldset>
+            <fieldset class="contact">
+              <div class="legend-wrapper flex">
+                <img src="assets/icons/contact.svg" alt="icone de imagem" />
+                <legend>Dados para contato</legend>
+              </div>
+              <div class="input-wrapper">
+                <label for="name">Nome</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nome completo"
+                  required
+                />
+                <div class="error">
+                  <img
+                    src="assets/icons/circle-alert.svg"
+                    alt="ícone de alerta vermelho"
+                  />
+                  <span>Campo obrigatório</span>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="input-wrapper flex-1">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exemplo@email.com"
+                  />
+                </div>
+                <div class="input-wrapper flex-1">
+                  <label for="phone">Telefone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(99) 99999-9999"
+                    pattern="^\(\[0{2}\) \d{5}-\d{4}$"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <div class="divider"></div>
+            <div class="terms-wrapper input-wrapper checkbox-wrapper">
+              <div class="checkbox-image"></div>
+              <input type="checkbox" name="terms" id="terms" />
+              <label for="terms">
+                Li e concordo com os
+                <strong>Termos e Condições</strong> e com a
+                <strong>Política de Privacidade</strong>
+              </label>
+            </div>
+              <div class="terms-wrapper input-wrapper checkbox-wrapper">
+              <div class="checkbox-image">
+              </div>
+              <input type="checkbox" name="iemail" id="iemail" />
+              <label for="iemail">
+                Aceito receber atualizações e promoções por e-mail
+              </label>
+            </div>
+              <div class="terms-wrapper input-wrapper checkbox-wrapper">
+              <div class="checkbox-image">
+              </div>
+              <input type="checkbox" name="sms" id="sms" />
+              <label for="sms">
+                Aceito receber atualizações e promoções por SMS
+              </label>
+            </div>
+            <div class="btn-container">
+              <button
+                type="submit">
+                <img src="assets/icons/ticket.svg" alt="">
+                Gerar convite
+              </button>
+            </div>
+            </div>
+          </form>
+        </main>
+      </section>
+    </div>
   </body>
 </html>

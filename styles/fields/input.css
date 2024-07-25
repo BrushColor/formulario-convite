@@ -1,0 +1,58 @@
+input,
+textarea,
+select,
+input:not(#btn-switch) {
+  appearance: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  outline: 1px solid var(--input-stroke);
+  padding: 0.75rem 1rem;
+  font: var(--text-md);
+  background-color: var(--input-base);
+  border-color: var(--input-stroke);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+label {
+  font: var(--text-sm);
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+input[type="datetime-local"]::-webkit-datetime-edit {
+  color: var(--input-placeholder);
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input[type="datetime-local"]::-ms-clear {
+  display: none;
+}
+
+input {
+  &[required]+.error {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font: var(--text-xs);
+    color: var(--danger);
+    margin-top: 0.5rem;
+  }
+
+  &:invalid {
+    border: 1px solid var(--danger);
+  }
+
+  &:not(:focus):valid+.error {
+    display: none;
+  }
+}

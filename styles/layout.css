@@ -1,0 +1,71 @@
+#app {
+  display: grid;
+  grid-template-columns: 32.78% 67.22%;
+  height: 100vh;
+  overflow: hidden;
+  gap: 1.25rem;
+  padding-block: 1.25rem;
+  scrollbar-color: transparent transparent;
+
+  .main-container {
+    max-width: 25rem;
+    margin-left: auto;
+
+    .header-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 0.75rem; 
+      height: calc(100vh - 2.4rem);
+      
+      .image-background {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 0.75rem; 
+        }
+      }
+
+      .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2rem;
+        
+
+        .logo {
+          width: 3.125rem; 
+          margin-bottom: 1rem;
+        }
+
+        h1 {
+          font: var(--logo);
+          color: var(--pink);
+          padding-block: .4375rem;
+        }
+
+        p {
+          font: 300 1rem var(--font-text);
+          color: var(--text-color);
+        }
+      }
+    }
+  }
+
+  .section-secondary {
+    overflow: auto;
+    max-width: 51.25rem;
+
+    main {
+      background-color: var(--shape-body);
+      padding: 5rem 8.125rem;
+      border-radius: 0.75rem;
+    }
+  }
+}

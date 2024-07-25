@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -14,15 +14,17 @@
   --heading-color: #F9F9F9; 
 
   --font-text: "Open Sans", sans-serif;
-  --text-md: 600 1rem var(--font-text);
-  --text-sm: 600 0.875rem var(--font-text);
-  --text-xs: 600 0.75rem var(--font-text);
+  --text-md: 1rem var(--font-text);
+  --text-sm: 0.875rem var(--font-text);
+  --text-xs: 0.75rem var(--font-text);
   --text-color: #C8CDD0;
 
   --brand-light: #59B2FF;
   --brand-mid: #3487CF;
   --brand-dark: #1D6FB6;
 
+  
+  --navy: #6A59FF;
   --purple: #B259FF;
   --fuschia: #FF59F9;
   --pink: #FF598B;
@@ -31,7 +33,7 @@
   --lime: #E1FF59;
   --green: #59FF91;
   --cyan: #59FFF9;
-  --navy: #6A59FF;
+  
 
   --danger: #FF5959;
 
@@ -43,4 +45,45 @@
   --shape-body: #212427;
   --shape-button: #2D3136;
   --shape-hover: #383D42;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--shape-background);
+  justify-content: center;
+}
+
+h2 {
+  color: var(--heading-color);
+  font: var(--heading-md);
+  margin-bottom: 2rem;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  color: var(--danger);
+  font: var(--text-xs);
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--input-stroke);
+  margin: 3rem 0;
 }
